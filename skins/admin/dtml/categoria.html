@@ -1,0 +1,60 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <br>
+
+            <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title"></h3>
+                </div>
+                <form action="admin_new_categoria.php" method="GET">
+                <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" class="form-control form-control-border border-width-2" id="nome" placeholder="Nome" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="oraria">Tariffa oraria in &nbsp;<i class="fa-sharp fa-solid fa-euro-sign"></i></label>
+                            <input type="number" name="oraria" value="1" class="form-control form-control-border border-width-2" id="oraria" placeholder="Tariffa oraria" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="giornaliera">Tariffa giornaliera in &nbsp;<i class="fa-sharp fa-solid fa-euro-sign"></i></label>
+                            <input type="number" name="giornaliera" value="1" class="form-control form-control-border border-width-2" id="giornaliera" placeholder="Tariffa giornaliera" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="mensile">Tariffa mensile in &nbsp;<i class="fa-sharp fa-solid fa-euro-sign"></i></label>
+                            <input type="number" name="mensile" value="1" class="form-control form-control-border border-width-2" id="mensile" placeholder="Tariffa mensile" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                <div class="row">
+                    <div class="col-sm-2">
+                    <button type="submit" class="btn btn-primary">Inserisci la categoria</button>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="admin_categorie.php" class="btn btn-warning">Torna Indietro</a>
+                    </div>
+                </div>
+                </div>
+                    
+            </div>
+        </form>
+        </div>
+
+        </div>
+    </section>
+</div>

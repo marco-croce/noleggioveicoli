@@ -1,0 +1,68 @@
+<div class="content-wrapper">
+    <section class="content">
+      <div class="container-fluid">
+        <br>
+  
+        <div class="card">
+          <div class="card-header">
+            <h3 class="text-center"><b>CATEGORIE</b></h3>
+          </div>
+          <div class="card-body p-0">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th style="width: 30%"><b>NOME</b></th>
+                  <th style="width: 15%"><b>TARIFFA ORARIA</b></th>
+                  <th style="width: 15%"><b>TARIFFA GIORNALIERA</b></th>
+                  <th style="width: 15%"><b>TARIFFA MENSILE</b></th>
+                  <th style="width: 15%"></th>
+                  <th style="width: 15%"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <div class="card-header">
+                  <a href="admin_add_categoria.php" class="card-title"><i class="far fa-plus"></i>&nbsp; Inserisci Categoria</a>
+              </div>
+                <[foreach]>
+                <form action="admin_change_categoria.php" method="POST">
+                <tr>
+                  <td><[nome]></td>
+                  <td>
+                    <div class="form-group">
+                      <input type="number" name="oraria" value="<[tariffa_oraria]>" class="form-control form-control-border border-width-2" id="tariffa_oraria" required>
+                  </div>
+                  </td>
+                  <td>
+                    <div class="form-group">
+                      <input type="number" name="giornaliera" value="<[tariffa_giornaliera]>" class="form-control form-control-border border-width-2" id="tariffa_giornaliera" required>
+                  </div>
+                  </td>
+                  <td>
+                    <div class="form-group">
+                      <input type="number" name="mensile" value="<[tariffa_mensile]>" class="form-control form-control-border border-width-2" id="tariffa_mensile" required>
+                  </div>
+                  </td>
+                  <td>
+                    <button type="submit" class="btn btn-primary">Salva</button>
+                  </td>
+                  <td>
+                    <a href="admin_change_categoria.php?delete=true&id=<[id]>" class="btn btn-danger">Elimina</a>
+                    <input type="hidden" id="cat" name="cat" value=<[id]> />
+                  </td>
+                </tr>
+              </form>
+                <[/foreach]>
+  
+              </tbody>
+  
+            </table>
+              
+            </div>
+  
+          </div>
+        </div>
+  
+  
+      </div>
+    </section>
+  </div>

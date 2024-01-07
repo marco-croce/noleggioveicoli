@@ -1,0 +1,55 @@
+<div class="content-wrapper">
+  <section class="content">
+    <div class="container-fluid">
+      <br>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="text-center">Sezioni visualizzate nella pagina</h3> <h2 class="text-center"><b><[page]></b></h2>
+        </div>
+        <div class="card-body p-0">
+          <table class="table table-striped text-center">
+            <thead>
+              <tr>
+                <th style="width: 40%"><b>SEZIONE</b></th>
+                <th style="width: 30%"><b>ORDINE DI VISUALIZZAZIONE</b></th>
+                <th style="width: 30%"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <[foreach]>
+              <form action="admin_change_section.php" method="GET">
+              <tr>
+                <td><[nome_section]><input type="hidden" id="section" name="section" value=<[nome_section]> /></td>
+                <td>
+                  <select class="custom-select form-control-border" name="select<[nome_section]>" id="select<[nome_section]>" onchange="onSelectChange()" >
+                    <[foreach]>
+                    <option value=<[ordine]>><[ordine]></option>
+                    <[/foreach]>
+                    <option selected value=<[ordineSel]>><[ordineSel]></option>
+                  </select>
+                </td>
+                <input type="hidden" id="page" name="page" value=<[pagina]> />
+                <td>
+                  <button type="submit" id="button<[nome_sec]>" class="btn btn-primary">CONFERMA</button>
+                </td>
+              </tr>
+            </form>
+              <[/foreach]>
+
+            </tbody>
+
+          </table>
+            
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="skins\admin\dist\js\pages\section.js"></script>

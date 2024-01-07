@@ -1,0 +1,82 @@
+<div class="content-wrapper">
+    <section class="content">
+      <div class="container-fluid">
+        <br>
+  
+        <div class="card">
+          <div class="card-header">
+            <h3 class="text-center"><b>STATISTICHE</b></h3>
+          </div>
+          <div class="card-body p-0">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th style="width: 20%"><b>TITOLO</b></th>
+                  <th style="width: 15%"><b>VALORE</b></th>
+                  <th style="width: 15%"><b>VISUALIZZATA</b></th>
+                  <th style="width: 15%"><b>PRINCIPALE</b></th>
+                  <th style="width: 30%"></th>
+                  <th style="width: 15%"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <div class="card-header">
+                  <a href="admin_add_statistica.php" class="card-title"><i class="far fa-plus"></i>&nbsp; Inserisci Statistica</a>
+              </div>
+                <[foreach]>
+                <form action="admin_change_statistica.php" method="POST">
+                <tr>
+                  <td><[titolo]></td>
+                  <td>
+                  <div class="form-group">
+                      <input type="number" name="numero" value="<[numero]>" class="form-control form-control-border border-width-2" id="numero" required>
+                  </div>
+                  </td>
+                  <td>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" value="si" type="radio" name="active" <[active]> >
+                      <label class="form-check-label">SI</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" value="no" type="radio" name="active" <[not_active]> >
+                      <label class="form-check-label">NO</label>
+                    </div>
+                  </div>
+                  </td>
+                <td>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" value="si" type="radio" name="main" <[main]> >
+                        <label class="form-check-label">SI</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" value="no" type="radio" name="main" <[not_main]> >
+                        <label class="form-check-label">NO</label>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button type="submit" class="btn btn-primary">Salva</button>
+                  </td>
+                  <td>
+                    <a href="admin_change_statistica.php?delete=true&id=<[id]>" class="btn btn-danger">Elimina</a>
+                    <input type="hidden" id="stat" name="stat" value=<[id]> />
+                  </td>
+                </tr>
+              </form>
+                <[/foreach]>
+  
+              </tbody>
+  
+            </table>
+              
+            </div>
+  
+          </div>
+        </div>
+  
+  
+      </div>
+    </section>
+  </div>

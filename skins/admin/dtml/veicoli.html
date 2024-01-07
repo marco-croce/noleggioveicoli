@@ -1,0 +1,76 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <br>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center"><b>VEICOLI</b></h3>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table table-striped text-center">
+                        <thead>
+                            <tr>
+                                <th style="width: 10%"><b>TARGA</b></th>
+                                <th style="width: 15%"><b>MARCA</b></th>
+                                <th style="width: 15%"><b>MODELLO</b></th>
+                                <th style="width: 15%"><b>CHILOMETRI</b></th>
+                                <th style="width: 15%"><b>CAMBIO</b></th>
+                                <th style="width: 30%"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="veicoli">
+                            <div class="card-header">
+                                <a href="admin_add_veicolo.php" class="card-title"><i class="far fa-plus"></i>&nbsp; Inserisci Veicolo</a>
+                                <div class="card-tools">
+                                    <div class="input-group input-group-sm" style="width: 300px;">
+                                        <input type="text" id="veicolo-search" name="veicolo-search" class="form-control float-right"
+                                            placeholder="Digita la targa del veicolo">
+                                        <div class="input-group-append">
+                                            <button type="button" id="button-search" name="button-search" class="btn btn-primary">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                            <button type="button" id="reset-search" name="reset-search" class="btn btn-danger">
+                                                <i class="fa-solid fa-x"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <[foreach]>
+                                    <tr>
+                                        <td>
+                                            <[targa]>
+                                        </td>
+                                        <td>
+                                            <[marca]>
+                                        </td>
+                                        <td>
+                                            <[modello]>
+                                        </td>
+                                        <td>
+                                            <[km_percorsi]>
+                                        </td>
+                                        <td>
+                                            <[cambio]>
+                                        </td>
+                                        <td>
+                                            <a href="admin_veicolo.php?id=<[id]>" class="btn btn-primary">GESTISCI</button>
+                                        </td>
+                                    </tr>
+                            <[/foreach]>
+                        </tbody>
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+
+</div>
+</section>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="skins\admin\dist\js\pages\veicoli.js"></script>

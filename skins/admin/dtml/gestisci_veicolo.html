@@ -1,0 +1,220 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <br>
+
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title"></h3>
+                </div>
+                <form action="admin_change_veicolo.php" method="POST" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="targa">Targa</label>
+                                    <input type="text" minlength="7" maxlength="7" size="7" name="targa"
+                                        class="form-control form-control-border border-width-2" id="targa"
+                                        placeholder="Targa" value=<[targa]> required>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="marca">Marca</label>
+                                    <input type="text" name="marca"
+                                        class="form-control form-control-border border-width-2" id="marca"
+                                        placeholder="Marca" value=<[marca]> required>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="modello">Modello</label>
+                                    <input type="text" name="modello"
+                                        class="form-control form-control-border border-width-2" id="modello"
+                                        placeholder="Modello" value=<[modello]> required>
+                                </div>
+                            </div>
+                            <div class="col-sm-1">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    <label for="km">Chilometri</label>
+                                    <input type="number" min="0" value=<[km_percorsi]> name="chilometri"
+                                    class="form-control form-control-border border-width-2" id="km"
+                                    placeholder="Chilometri" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-1">
+                                <div class="form-group">
+                                    <label for="posti">Posti</label>
+                                    <input type="number" min="2" name="posti" value=<[n_posti]> class="form-control
+                                    form-control-border border-width-2" id="posti" placeholder="Numero di posti"
+                                    required>
+                                </div>
+                            </div>
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    <label for="oraria">Tariffa oraria in &nbsp;<i
+                                            class="fa-sharp fa-solid fa-euro-sign"></i></label>
+                                    <input type="number" min="1" name="oraria" value=<[oraria]> class="form-control
+                                    form-control-border border-width-2" id="oraria" placeholder="Tariffa oraria"
+                                    required>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    <label for="giornaliera">Tariffa giornaliera in &nbsp;<i
+                                            class="fa-sharp fa-solid fa-euro-sign"></i></label>
+                                    <input type="number" min="1" name="giornaliera" value=<[giornaliera]>
+                                    class="form-control form-control-border border-width-2" id="giornaliera"
+                                    placeholder="Tariffa giornaliera" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    <label for="mensile">Tariffa mensile in &nbsp;<i
+                                            class="fa-sharp fa-solid fa-euro-sign"></i></label>
+                                    <input type="number" min="1" name="mensile" value=<[mensile]> class="form-control
+                                    form-control-border border-width-2" id="mensile" placeholder="Tariffa mensile"
+                                    required>
+                                </div>
+                            </div>
+                            <div class="col-sm-1">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="cambio">Cambio</label>
+                                    <select class="custom-select form-control-border" name="cambio" id="cambio"
+                                        required>
+                                        <option <[Manuale]> value="manuale">MANUALE</option>
+                                        <option <[Automatico]> value="automatico">AUTOMATICO</option>
+                                        <option <[Sequenziale]> value="sequenziale">SEQUENZIALE</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="alimentazione">Alimentazione</label>
+                                    <select class="custom-select form-control-border" name="alimentazione"
+                                        id="alimentazione" required>
+                                        <option <[Diesel]> value="diesel">DIESEL</option>
+                                        <option <[Benzina]> value="benzina">BENZINA</option>
+                                        <option <[Elettrica]> value="elettrica">ELETTRICA</option>
+                                        <option <[Gpl]> value="gpl">GPL</option>
+                                        <option <[Ibrida]> value="ibrida">IBRIDA</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="categoria">Categoria</label>
+                                    <select class="custom-select form-control-border" name="categoria" id="categoria"
+                                        required>
+                                        <[foreach]>
+                                            <option value=<[id_cat]>
+                                                <[selected]> ><[nome_cat]>
+                                            </option>
+                                        <[/foreach]>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-1">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="descrizione">Descrizione</label>
+                                    <textarea id="descrizione" class="form-control" name="descrizione" rows="4"
+                                        placeholder="Descrizione" required><[descrizione]></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <div>
+                                    <label for="immagine">Immagine</label>
+                                    <br>
+                                    <br>
+                                    <div>
+                                        <input id="immagine" type="file" name="immagine" accept="image/png, image/jpeg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group text-center">
+                                    <label for="active">Consigliato</label>
+                                    <br>
+                                    <br>
+                                    <div class="form-check">
+                                        <input class="form-check-input" value="si" type="radio" name="active"
+                                            <[checked]> >
+                                        <label class="form-check-label">SI</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" value="no" type="radio" name="active"
+                                            <[not_checked]> >
+                                        <label class="form-check-label">NO</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-1">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-3 text-center">
+                                <div class="form-group">
+                                    <label>Optional</label>
+                                    <select multiple class="custom-select" name="features[]">
+                                        <[foreach]>
+                                            <option value=<[id_feat]>
+                                                <[sel]> > <[nome_feat]>
+                                            </option>
+                                        <[/foreach]>
+                                    </select>
+                                    <p class="mt-2 text-sm"> Utilizzare <b>ctrl</b> per selezionare più optional</p>
+                                </div>
+                            </div>
+                            <input type="hidden" id="car" name="car" value=<[id]> />
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn btn-primary">Aggiorna il veicolo</button>
+                            </div>
+                            <div class="col-sm-2">
+                                <a href="admin_veicoli.php" class="btn btn-warning">Torna Indietro</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</div>

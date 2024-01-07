@@ -1,0 +1,31 @@
+<section class="ftco-section testimony-section bg-light">
+	<div class="container">
+		<div class="row justify-content-center mb-5">
+			<div class="col-md-7 text-center heading-section ftco-animate">
+				<span class="subheading"><[nome]></span>
+				<h2 class="mb-3"><[titolo]></h2>
+			</div>
+		</div>
+		<div class="row ftco-animate">
+			<div class="col-md-12">
+				<div class="carousel-testimony owl-carousel ftco-owl">
+					<[foreach]>
+					<div class="item">
+						<div class="testimony-wrap rounded text-center py-4 pb-5">
+							<div class="user-img mb-2"
+								style="background-image: url(skins/rental/assets/images/<[immagine]>)">
+							</div>
+							<div class="text pt-4">
+								<h2 class="mb-0"><a href="car.php?id=<[id_veicolo]>"><[marca]> <[modello]></a></h2>
+								<p class="mb-4">"<[testo]>"</p>
+								<p class="name"><[name]> <[surname]></p>
+								<span><[data]></span>
+							</div>
+						</div>
+					</div>
+					<[/foreach]>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

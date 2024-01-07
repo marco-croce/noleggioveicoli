@@ -1,0 +1,24 @@
+<[foreach]>
+<div class="col-md-4">
+    <div class="car-wrap rounded ftco-animate">
+        <div class="img rounded d-flex align-items-end"
+            style="background-image: url(skins/rental/assets/images/<[immagine]>);">
+        </div>
+        <div class="text text-center">
+            <h2 class="mb-0"><a href="car.php?id=<[id]>">
+                    <[marca]>
+                        <[modello]>
+                </a></h2>
+            <div class="d-flex mb-3">
+                <span class="cat">
+                    <[categoria]>
+                </span>
+                <p class="price ml-auto">€<[tariffa_giornaliera]> <span>/giorno</span></p>
+            </div>
+            <!-- car.php?id=<[id]> per visualizzare il veicolo con ID=id -->
+            <p class="d-flex  justify-content-center mb-0 "><a href="car.php?id=<[id]>"
+                    class="btn btn-primary py-2 ml-1">Noleggia</a></p>
+        </div>
+    </div>
+</div>
+<[/foreach]>

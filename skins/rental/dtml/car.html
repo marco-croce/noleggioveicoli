@@ -1,0 +1,201 @@
+<section class="hero-wrap hero-wrap-2 js-fullheight"
+	style="background-image: url('skins/rental/assets/images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+			<div class="col-md-9 ftco-animate pb-5">
+				<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i
+								class="ion-ios-arrow-forward"></i></a></span> <span><a href="cars.php">Veicoli <i
+							class="ion-ios-arrow-forward"></i></a></span></p>
+				<h1 class="mb-3 bread">Caratteristiche del veicolo</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="ftco-section ftco-car-details">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-12">
+				<div class="car-details">
+					<div style=" display: flex; justify-content: center; align-items: center;">
+						<img style="max-width: 680px; max-height: 480px;" src="skins/rental/assets/images/<[immagine]>" alt="Image">
+					</div>
+					<div class="text text-center">
+						<h2><[marca]> <[modello]></h2>
+						<span class="subheading"><[categoria]></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md d-flex align-self-stretch ftco-animate">
+				<div class="media block-6 services">
+					<div class="media-body py-md-4">
+						<div class="d-flex mb-3 align-items-center">
+							<div class="icon d-flex align-items-center justify-content-center"><span
+									class="flaticon-dashboard"></span></div>
+							<div class="text">
+								<h3 class="heading mb-0 pl-3">
+									KM
+									<span><[km_percorsi]></span>
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md d-flex align-self-stretch ftco-animate">
+				<div class="media block-6 services">
+					<div class="media-body py-md-4">
+						<div class="d-flex mb-3 align-items-center">
+							<div class="icon d-flex align-items-center justify-content-center"><span
+									class="flaticon-pistons"></span></div>
+							<div class="text">
+								<h3 class="heading mb-0 pl-3">
+									Cambio
+									<span><[cambio]></span>
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md d-flex align-self-stretch ftco-animate">
+				<div class="media block-6 services">
+					<div class="media-body py-md-4">
+						<div class="d-flex mb-3 align-items-center">
+							<div class="icon d-flex align-items-center justify-content-center"><span
+									class="flaticon-car-seat"></span></div>
+							<div class="text">
+								<h3 class="heading mb-0 pl-3">
+									Posti
+									<span><[n_posti]></span>
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md d-flex align-self-stretch ftco-animate">
+				<div class="media block-6 services">
+					<div class="media-body py-md-4">
+						<div class="d-flex mb-3 align-items-center">
+							<div class="icon d-flex align-items-center justify-content-center"><span
+									class="flaticon-diesel"></span></div>
+							<div class="text">
+								<h3 class="heading mb-0 pl-3">
+									Alimentazione
+									<span><[alimentazione]></span>
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="request-form ftco-animate">
+			<form method="post" class="request-form ftco-animate bg-info" id="noleggio">
+				<div class="d-flex">
+					<div class="form-group mr-2">
+						<label for="inizio" class="label">Data di ritiro</label>
+						<input type="date" name="inizio" class="form-control" id="inizio" placeholder="dal" required>
+					</div>
+		
+					<div class="form-group ml-2">
+						<label for="fine" class="label">Data di riconsegna</label>
+						<input type="date" name="fine" class="form-control" id="fine" placeholder="al" required disabled>
+					</div>
+				</div>
+		
+				<div class="form-group">
+					<label for="orario" class="label">Ora di ritiro</label>
+					<input type="time" name="orario" min="08:00" max="19:00" class="form-control" id="orario" placeholder="alle ore" required>
+				</div>
+
+					<label id="label" class="text-white"></label>&nbsp;<label id="prezzo" class="text-white"></label>
+		
+				<div class="form-group">
+					<input type="submit" value="Noleggia" class="btn btn-secondary py-3 px-4">
+				</div>
+		
+			</form>
+		</div>
+		
+
+		<div class="row">
+			<div class="col-md-12 pills">
+				<div class="bd-example bd-example-tabs">
+					<div class="d-flex justify-content-center">
+						<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+							<li class="nav-item">
+								<a class="nav-link active" id="pills-description-tab" data-toggle="pill"
+									href="#pills-description" role="tab" aria-controls="pills-description"
+									aria-expanded="true">Optional</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="pills-manufacturer-tab" data-toggle="pill"
+									href="#pills-manufacturer" role="tab" aria-controls="pills-manufacturer"
+									aria-expanded="true">Descrizione</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="pills-review-tab" data-toggle="pill" href="#pills-review"
+									role="tab" aria-controls="pills-review" aria-expanded="true">Recensioni</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="tab-content" id="pills-tabContent">
+						<div class="tab-pane fade show active" id="pills-description" role="tabpanel"
+							aria-labelledby="pills-description-tab">
+							<div class="row">
+								<div class="col-md-6">
+									<ul class="features">
+										<[foreach]>
+										<li class="<[check]>"><span class="ion-ios-<[simbolo]>"></span><[feature]></li>
+										<[/foreach]>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane fade" id="pills-manufacturer" role="tabpanel"
+							aria-labelledby="pills-manufacturer-tab">
+							<p><[descrizione]></p>
+						</div>
+
+						<div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
+							<div class="row">
+								<div class="col-md-12">
+									<h3 class="head"><[numero]> recensioni</h3>
+									<[foreach]>
+									<div class="review d-flex">
+										<div class="desc">
+											<h4>
+												<span class="text-left"><[name]> <[surname]></span>
+												<span class="text-right"><[data]></span>
+											</h4>
+											<p class="star">
+												<span>
+													<[foreach]>
+													<i class="ion-ios-<[star]>"></i>
+													<[/foreach]>
+												</span>
+											</p>
+											<p><[testo]></p>
+										</div>
+									</div>
+									<[/foreach]>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script src="skins\rental\assets\js\ajax\noleggio.js"></script>

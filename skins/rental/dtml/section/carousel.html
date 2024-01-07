@@ -1,0 +1,32 @@
+<section class="ftco-section ftco-no-pt bg-light">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-12 heading-section text-center ftco-animate mb-5">
+				<span class="subheading">La nostra offerta</span>
+				<h2 class="mb-2">Veicoli consigliati</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="carousel-car owl-carousel">
+<[foreach]>
+<div class="item">
+    <div class="car-wrap rounded ftco-animate">
+        <div class="img rounded d-flex align-items-end" style="background-image: url(skins/rental/assets/images/<[immagine]>);">
+        </div>
+        <div class="text text-center">
+            <h2 class="mb-0"><a href="car.php?id=<[id]>"><[marca]> <[modello]></a></h2>
+            <div class="mb-2">
+                <span class="cat"><[categoria]></span>
+            </div>
+            <!-- car.php?id=<[id]> per visualizzare il veicolo con ID=id -->
+            <p class="d-flex justify-content-center mb-1"> <a href="car.php?id=<[id]>" class="btn btn-primary py-2 ml-1">Noleggia</a></p>
+        </div>
+    </div>
+</div>
+<[/foreach]>
+</div>
+</div>
+</div>
+</div>
+</section>

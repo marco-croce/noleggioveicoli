@@ -1,0 +1,52 @@
+<style>
+    .table td {
+        text-align: center;
+    }
+</style>
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center"><b>CONTATTI</b></h3>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table table-striped text-center">
+                        <thead>
+                            <tr>
+                                <th style="width: 15%"><b>TIPOLOGIA</b></th>
+                                <th style="width: 20%"><b>CONTENUTO</b></th>
+                                <th style="width: 5%"></th>
+                                <th style="width: 20%"><b>LINK</b></th>
+                                <th style="width: 15%"><b></b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <[foreach]>
+                                <form action="admin_change_contatto.php" method="POST">
+                                    <tr>
+                                        <td>
+                                            <[tipo]>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-border border-width-2" name="contenuto" value="<[contenuto]>">
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-border border-width-2" name="collegamento" value="<[collegamento]>">
+                                        </td>
+                                        <td>
+                                            <button type="submit" class="btn btn-primary">Salva</button>
+                                            <input type="hidden" id="contatto" name="contatto" value=<[id_contatto]> />
+                                        </td>
+                                    </tr>
+                                </form>
+                                <[/foreach]>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

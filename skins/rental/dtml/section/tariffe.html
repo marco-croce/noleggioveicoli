@@ -1,0 +1,75 @@
+<section class="ftco-section ftco-cart">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ftco-animate">
+                <div class="car-list">
+                    <table class="table">
+                        <thead class="thead-primary">
+                            <tr class="text-center">
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                                <th class="bg-primary heading">Tariffa oraria</th>
+                                <th class="bg-dark heading">Tariffa giornaliera</th>
+                                <th class="bg-black heading">Tariffa mensile</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <[foreach]>
+                                <tr class="">
+                                    <td class="car-image">
+                                        <div class="img"
+                                            style="background-image:url(skins/rental/assets/images/<[immagine]>);">
+                                        </div>
+                                    </td>
+                                    <td class="product-name">
+                                        <h3><a color="black">
+                                            <b><[nome1]></b>
+                                        </a></h3>
+                                    </td>
+
+                                    <!-- cars.php?cat=<[id]> per visualizzare i veicoli appartenenti a quella categoria -->
+                                    
+                                    <td class="price">
+                                        <p class="btn-custom"><a href="cars.php?cat=<[nome1]>">Veicoli</a></p>
+                                        <div class="price-rate">
+                                            <h3>
+                                                <span class="num">€<small class="currency"></small>
+                                                    <[tariffa_oraria]>
+                                                </span>
+                                                <span class="per">/ora</span>
+                                            </h3>
+                                        </div>
+                                    </td>
+
+                                    <td class="price">
+                                        <p class="btn-custom"><a href="cars.php?cat=<[nome1]>">Veicoli</a></p>
+                                        <div class="price-rate">
+                                            <h3>
+                                                <span class="num">€<small class="currency"></small>
+                                                    <[tariffa_giornaliera]>
+                                                </span>
+                                                <span class="per">/giorno</span>
+                                            </h3>
+                                        </div>
+                                    </td>
+
+                                    <td class="price">
+                                        <p class="btn-custom"><a href="cars.php?cat=<[nome1]>">Veicoli</a></p>
+                                        <div class="price-rate">
+                                            <h3>
+                                                <span class="num">€<small class="currency"></small>
+                                                    <[tariffa_mensile]>
+                                                </span>
+                                                <span class="per">/mese</span>
+                                            </h3>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <[/foreach]>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

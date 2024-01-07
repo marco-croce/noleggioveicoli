@@ -1,0 +1,118 @@
+<script src="skins\rental\assets\js\ajax\veicoli.js"></script>
+
+<style>
+    .row {
+        margin: 0;
+    }
+    .selectbox-container {
+        margin-top: 25px;
+		margin-bottom: 25px;
+    }
+</style>
+
+<div>
+	<div class="row selectbox-container">
+		<div class="col-md-3">
+			<label for="filtro-marca">Marca</label>
+			<select id="filtro-marca" class="form-control form-control-sm">
+				<option value="0">Seleziona</option>
+				<[foreach]>
+					<option value="<[marchio2]>">
+						<[marchio1]>
+					</option>
+				<[/foreach]>
+			</select>
+		</div>
+
+		<div class="col-md-3">
+			<label for="filtro-cambio">Cambio</label>
+			<select id="filtro-cambio" class="form-control form-control-sm">
+				<option value="0">Seleziona</option>
+				<[foreach]>
+					<option value="<[cambio2]>">
+						<[cambio1]>
+					</option>
+				<[/foreach]>
+			</select>
+		</div>
+
+		<div class="col-md-3">
+			<label for="filtro-alimentazione">Alimentazione</label>
+			<select id="filtro-alimentazione" class="form-control form-control-sm">
+				<option value="0">Seleziona</option>
+				<[foreach]>
+					<option value="<[alimentazione2]>">
+						<[alimentazione1]>
+					</option>
+				<[/foreach]>
+			</select>
+		</div>
+
+		<div class="col-md-3">
+			<label for="filtro-categoria">Categoria</label>
+			<select id="filtro-categoria" class="form-control form-control-sm">
+				<option value="0">Seleziona</option>
+				<[foreach]>
+					<option value="<[categoria2]>">
+						<[categoria1]>
+					</option>
+				<[/foreach]>
+			</select>
+		</div>
+
+	</div>
+
+	<div class="row selectbox-container">
+		
+		<div class="col-md-3">
+			<label for="prezzo-da">Tariffa minima:</label>
+			<div class="input-group input-group-sm">
+				<div class="input-group-prepend input-group-prepend-sm">
+					<span class="input-group-text">€</span>
+				</div>
+				<input type="text" id="prezzo-da" class="form-control" placeholder="min">
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<label for="prezzo-a">Tariffa massima:</label>
+			<div class="input-group  input-group-sm">
+				<div class="input-group-prepend input-group-prepend-sm">
+					<span class="input-group-text">€</span>
+				</div>
+				<input type="text" id="prezzo-a" class="form-control" placeholder="max">
+			</div>
+		</div>
+	</div>
+</div>
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row" id="veicoli">
+            <[foreach]>
+                <div class="col-md-4">
+                    <div class="car-wrap rounded ftco-animate">
+                        <div class="img rounded d-flex align-items-end"
+                            style="background-image: url(skins/rental/assets/images/<[immagine]>);">
+                        </div>
+                        <div class="text text-center">
+                            <h2 class="mb-0"><a href="car.php?id=<[id]>">
+                                    <[marca]>
+                                        <[modello]>
+                                </a></h2>
+                            <div class="d-flex mb-3">
+                                <span class="cat">
+                                    <[categoria]>
+                                </span>
+                                <p class="price ml-auto">€<[tariffa_giornaliera]> <span>/giorno</span></p>
+                            </div>
+                            <!-- car.php?id=<[id]> per visualizzare il veicolo con ID=id -->
+                            <p class="d-flex  justify-content-center mb-0 "><a href="car.php?id=<[id]>"
+                                    class="btn btn-primary py-2 ml-1">Noleggia</a></p>
+                        </div>
+                    </div>
+                </div>
+            <[/foreach]>
+        </div>
+    </div>
+</section>

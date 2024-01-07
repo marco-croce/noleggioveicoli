@@ -1,0 +1,74 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <br>
+
+            <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title"></h3>
+                </div>
+                <form action="admin_new_statistica.php" method="GET">
+                <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="titolo">Titolo</label>
+                            <input type="text" name="titolo" class="form-control form-control-border border-width-2" id="titolo" placeholder="Titolo" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="valore">Valore</label>
+                            <input type="number" name="valore" value="1" class="form-control form-control-border border-width-2" id="valore" placeholder="Valore" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <div class="form-group">
+                            <label for="active">Visualizzata</label>
+                            <div class="form-check">
+                            <input class="form-check-input" value="si" type="radio" name="active" checked >
+                            <label class="form-check-label">SI</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" value="no" type="radio" name="active" >
+                            <label class="form-check-label">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <div class="form-group">
+                            <label for="main">Principale</label>
+                            <div class="form-check">
+                            <input class="form-check-input" value="si" type="radio" name="main" checked >
+                            <label class="form-check-label">SI</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" value="no" type="radio" name="main" >
+                            <label class="form-check-label">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                <div class="row">
+                    <div class="col-sm-2">
+                    <button type="submit" class="btn btn-primary">Inserisci la statistica</button>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="admin_statistiche.php" class="btn btn-warning">Torna Indietro</a>
+                    </div>
+                </div>
+                </div>
+                    
+            </div>
+        </form>
+        </div>
+
+        </div>
+    </section>
+</div>

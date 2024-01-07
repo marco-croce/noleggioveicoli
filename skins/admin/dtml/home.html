@@ -1,0 +1,178 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Info boxes -->
+        <br>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <a href="admin_noleggi.php" class="info-box-icon text-white bg-success elevation-1">
+                <i class="fas fa-taxi"></i>
+              </a>
+              <div class="info-box-content">
+                <span class="info-box-text">Noleggi Attivi</span>
+                <span class="info-box-number">
+                  <[numero_noleggi]>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <a href="admin_veicoli.php" class="info-box-icon text-white elevation-1" style="background-color: #535653;">
+                <i class="fa fa-car"></i>
+              </a>
+              <div class="info-box-content">
+                <span class="info-box-text">Veicoli</span>
+                <span class="info-box-number"><[numero_veicoli]></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <!-- fix for small devices only -->
+          <div class="clearfix hidden-md-up"></div>
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <a href="admin_messaggi.php" class="info-box-icon text-white elevation-1" style="background-color: #b5b57e;">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <div class="info-box-content">
+                <span class="info-box-text">Messaggi</span>
+                <span class="info-box-number"><[numero_messaggi]></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-euro-sign"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Profitto Mensile</span>
+                <span class="info-box-number"><[profitto]></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          <div class="col-md-8">
+
+
+            <!-- TABLE: LATEST ORDERS -->
+            <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">Noleggi</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table m-0">
+                    <thead>
+                      <tr>
+                        <th>Nome</th>
+                        <th>Cognome</th>
+                        <th>Email</th>
+                        <th>Veicolo</th>
+                        <th>Stato</th>
+                        <th>Data e ora di ritiro</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <[foreach]>
+                      <tr>
+                        <td><[nome2]></td>
+                        <td><[cognome2]></td>
+                        <td><[email]></td>
+                        <td><[marca]> <[modello]></td>
+                        <td><span class="badge badge-warning"><[stato]></span></td>
+                        <td>
+                          <div class="sparkbar" data-color="#00a65a" data-height="20"><[data_ritiro]> &nbsp; <b><[orario]></b></div>
+                        </td>
+                      </tr>
+                      <[/foreach]>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <a href="admin_noleggi.php" class="btn btn-sm btn-secondary float-right">Visualizza tutti i noleggi</a>
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+
+          <div class="col-md-4">
+            <style>
+              .product-img img {
+                cursor: pointer;
+                transition: opacity 0.3s ease;
+              }
+            
+              .product-img img:hover {
+                opacity: 0.7;
+              }
+            </style>
+            
+            <!-- PRODUCT LIST -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Messaggi</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <ul class="products-list product-list-in-card pl-2 pr-2">
+                  <[foreach]>
+                  <li class="item">
+                    <div class="product-img">
+                      <a href='mailto:<[email1]>'><img src="skins/admin/dist/img/messaggio.png" class="img-size-50"></a>
+                    </div>
+                    <div class="product-info">
+                      <span class="product-title"><[nome1]> <[cognome1]></span>
+                      <span class="badge badge-warning float-right"><[data1]></span>
+                      <span class="product-description text-info"><[oggetto1]></span>
+                      <span class="product-description"><[messaggio1]></span>
+                      <br>
+                    </div>
+                  </li>
+                <[/foreach]>
+                
+                </ul>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer text-center">
+                <a href="admin_messaggi.php" class="uppercase">Tutti i messagi</a>
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div><!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->

@@ -1,0 +1,88 @@
+<style>
+    .table td {
+        text-align: center;
+    }
+</style>
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <br>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center"><b>NOLEGGI</b></h3>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table table-striped text-center">
+                        <thead>
+                            <tr>
+                                <th style="width: 10%"><b>VEICOLO</b></th>
+                                <th style="width: 15%"><b>UTENTE</b></th>
+                                <th style="width: 15%"><b>DATA DEL RITIRO</b></th>
+                                <th style="width: 15%"><b>DATA E ORA DI RICONSEGNA</b></th>
+                                <th style="width: 5%"><b>COSTO</b></th>
+                                <th style="width: 20%"><b>KM DEL VEICOLO</b></th>
+                                <th style="width: 20%"><b>STATO</b></th>
+                                <th style="width: 20%"><b></b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <[foreach]>
+                                <form action="admin_change_noleggio.php" method="POST">
+                                    <tr>
+                                        <td>
+                                            <[targa]>
+                                        </td>
+                                        <td>
+                                            <[email]>
+                                        </td>
+                                        <td>
+                                            <[data_ritiro]>&nbsp;&nbsp;&nbsp;<[orario]>
+                                        </td>
+                                        <td>
+                                            <[data_riconsegna]>
+                                        </td>
+                                        <td>
+                                            <[costo]>&nbsp;€
+                                        </td>
+                                        <td>
+                                            <input type="text" name="km" value="<[km_percorsi]>" class="form-control form-control-border border-width-2" >
+                                        </td>
+                                        <td>
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <select id="stato" name="stato" class="form-control">
+                                                        <option value="<[stato]>" selected>
+                                                            <[stato]>
+                                                        </option>
+                                                        <option value="<[stato2]>">
+                                                            <[stato2]>
+                                                        </option>
+                                                        <option value="<[stato3]>">
+                                                            <[stato3]>
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>  
+                                            <input type="hidden" id="noleggio" name="noleggio" value=<[id]> />
+                                            <input type="hidden" id="veicolo" name="veicolo" value=<[id_veicolo]> />
+                                            <button type="submit" class="btn btn-primary">Salva</button>
+                                        </td>
+                                    </tr>
+                                </form>
+                            <[/foreach]>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+</div>
+</section>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="skins\admin\dist\js\pages\noleggi.js"></script>

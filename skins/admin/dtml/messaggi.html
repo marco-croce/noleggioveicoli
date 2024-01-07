@@ -1,0 +1,51 @@
+<style>
+  .table td {
+    word-wrap: break-word;
+    max-width: 200px; /* Imposta la larghezza massima desiderata */
+  }
+</style>
+
+<div class="content-wrapper">
+  <section class="content">
+    <div class="container-fluid">
+      <br>
+     <!-- TABLE: LATEST ORDERS -->
+     <div class="card">
+      <div class="card-header">
+        <h3 class="text-center"><b>MESSAGGI</b></h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table m-0">
+            <thead>
+              <tr>
+                <th>NOME E COGNOME</th>
+                <th>EMAIL</th>
+                <th>OGGETTO</th>
+                <th>MESSAGGIO</th>
+                <th>DATA</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <[foreach]>
+              <tr>
+                <td><[nome1]> <[cognome1]></td>
+                <td><[email1]></td>
+                <td><[oggetto1]></td>
+                <td><[messaggio1]></td>
+                <td><[data1]></td>
+                <td><a href='mailto:<[email1]>'>Rispondi</a></td>
+              </tr>
+              <[/foreach]>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.table-responsive -->
+      </div>
+      <!-- /.card-body -->
+    </div>
+    </div>
+  </section>
+</div>
